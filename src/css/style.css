@@ -59,11 +59,9 @@
   --bs-font-serif: "Times New Roman", Times, serif;
   --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0)
-  );
+  --bs-gradient: linear-gradient(180deg,
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0));
   --bs-body-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -91,6 +89,7 @@
 * {
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
@@ -103,7 +102,8 @@ body {
 
 a:link,
 a:visited {
-  color: var(--bs-link-color);
+  /*color: var(--bs-link-color);*/
+  color: white;
 }
 
 a:hover {
@@ -137,7 +137,8 @@ a:hover {
   display: flex;
   align-items: center;
 }
-.site-title > span {
+
+.site-title>span {
   font-size: 1rem;
   margin-left: 0.3em;
 }
@@ -171,3 +172,86 @@ svg {
   background-color: var(--bs-black);
   fill: white;
 }
+
+
+/*Added styles*/
+
+header a {
+  text-decoration: none;
+  /* removes underline */
+}
+
+.global-header {
+  display: flex;
+  flex-wrap: inline;
+  background-color: black;
+  color: white;
+  padding: 10px;
+}
+
+.global-header__right {
+  margin-left: auto;
+  /* Pushes the right section to the far right */
+  display: flex;
+  flex-wrap: inline;
+}
+
+#global-nav-toggle {
+  display: flex;
+  flex-wrap: inline;
+}
+
+.search-icon .icon,
+button {
+  width: 50%;
+  height: 50%;
+}
+
+
+a.hero-banner_title {
+  color: white;
+  font-size: 2.5rem;
+}
+
+.park-nav {
+  background-color: black;
+}
+
+ul {
+  display: flex;
+  /* Creating the ability to make them all on one line */
+  flex-wrap: inline;
+  /* Setting them all on one line */
+  list-style-type: none;
+  /* Removing the default bullet points */
+}
+
+ul .icon {
+  display: flex;
+  flex-wrap: block;
+  width: 30%;
+  height: auto;
+}
+
+li a {
+  color: white;
+  /* changes the text color */
+}
+
+
+
+
+@media (max-width: 320px) {
+  /*320 480*/
+
+
+
+}
+
+/*
+<svg class="icon">
+  <use xlink:href="images/sprite.symbol.svg"></use>
+</svg>
+
+Add svg to the website.
+*/
