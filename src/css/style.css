@@ -101,6 +101,10 @@ body {
 }
 
 .disclaimer,
+.global-header,
+.hero-banner_context {
+  padding: 1em;
+}
 
 a:link,
 a:visited {
