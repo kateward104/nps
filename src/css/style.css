@@ -102,7 +102,7 @@ body {
 
 .disclaimer,
 .global-header,
-.hero-banner_context {
+.hero-banner_content {
   padding: 1em;
 }
 
@@ -311,4 +311,62 @@ header a {
 a:visited {
   color: var(--bs-link-color);
   /* changes the link color at the very top for the "Yellowstone National Park" */
+}
+
+
+/*Week 2 added CSS */
+
+main,
+footer {
+  padding: 20px;
+  margin-top: 20px;
+}
+
+
+.info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.intro h1 {
+  font-family: var(--bs-font-serif);
+}
+
+section {
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+
+.media-card {
+  padding: none;
+}
+
+.media-card a {
+  color: var(--bs-black);
+  text-decoration: none;
+}
+
+footer {
+  background: var(--bs-border-color);
+  /* I don't know how to make this the fill images/topo_pattern.png, all the stuff below if for potential background pattern */
+  background-repeat: repeat;
+  /* or no-repeat if you only want one copy */
+  background-size: cover;
+  /* makes it fill the footer area */
+  background-position: center;
+  min-height: 150px;
+  /* adjust to what looks good */
+}
+
+
+.contact h3 {
+  font-family: var(--bs-font-serif);
+  text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .info {
+    grid-template-columns: 1fr;
+  }
 }
