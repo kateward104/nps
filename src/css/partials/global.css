@@ -148,8 +148,10 @@ a:hover {
     padding: 0.5em 1em;
 }
 
-.her-banner__title {
+
+.hero-banner__title a {
     font-size: 1.8em;
+    text-decoration: none;
 }
 
 .hero-banner__subtitle {
