@@ -18,18 +18,17 @@ export async function getJson(url) {
   return data;
 }
 
-export async function getParkData() {
-  const parkData = await getJson("parks?parkCode=yell");
-  return parkData.data[0];
-}
-
-
 export function getInfoLinks(data) {
   const withUpdatedImages = parkInfoLinks.map((item, index) => {
     item.image = data[index + 2].url;
     return item;
   });
   return withUpdatedImages;
+}
+
+export async function getParkData() {
+  const parkData = await getJson("parks?parkCode=yell");
+  return parkData.data[0];
 }
 
 const park = {
