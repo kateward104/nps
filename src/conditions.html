@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yellowstone National Park</title>
   <link rel="stylesheet" href="css/style.css" />
-  <script type="module" src="js/main.js" defer></script>
+  <script type="module" src="js/conditions.js" defer></script>
 </head>
 
 <body>
@@ -117,11 +117,27 @@
     We will only have 3 sections on our page: “Current Conditions”, “Fees and Passes”, and “Visitor Centers”. We will build those actual pages later
     The footer has also been simplified to just the address and phone number for the park.
 -->
-    <section class="intro" id="intro">
+    <h1>Current Conditions</h1>
 
+    <section class="alerts">
+      <h2>Alerts</h2>
+      <ul></ul>
     </section>
-    <section class="info" id="info">
 
+    <section class="visitor">
+      <h2>Visitor Services</h2>
+      <details name="current-details">
+        <summary>Visitor Centers</summary>
+        <ul></ul>
+        <details>
+    </section>
+
+    <section class="activities">
+      <h2>Activities</h2>
+      <details name="current-details">
+        <summary>All Activites</summary>
+        <ul></ul>
+      </details>
     </section>
 
   </main>
