@@ -236,6 +236,11 @@ export const parkInfoLinks = [
 ];
 
 
+export async function getAlerts() {
+  const alerts = await getJson("alerts?parkCode=yell");
+  return alerts;
+}
+
 /*export async function getParkData() {
   let data = {}
   const response = await fetch(baseUrl + "parks" + "?parkCode=yell");
