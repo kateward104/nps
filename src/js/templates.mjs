@@ -1,3 +1,7 @@
+//add this at the top of the file
+import spritePath from '../images/sprite.symbol.svg';
+
+
 // parkInfoTemplate
 export function parkInfoTemplate(info) {
     return `<a href="/" class="hero-banner__title:>${IntersectionObserver.name}</a>
@@ -20,6 +24,13 @@ export function mediaCardTemplate(info) {
     `;
     // image, headline, and paragraph
 }
+
+export function visitorCenterTemplate(info) {
+    return `<div class="visitorCenter">
+        <h3>${info.name}</h3>
+        <p>${info.description}</p>`;
+}
+
 
 function getMailingAddresses(addresses) {
     const mailing = addresses.find((address) => address.type === "Mailing");
@@ -60,10 +71,14 @@ export function alertTemplate(alert) {
 
     return `<li class="alert">
     <svg class="icon" focusable="false" aria-hidden="true">
-        <use xlink:href="/images/sprite.symbol.svg#alert-${alertType}"></use>
+        <use xlink:href="${spritePath}#alert-${alertType}"></use>
     </svg>
     <div>
         <h3 class="alert-${alertType}">${alert.title}</h3>
         <p>${alert.description}</p>
     </div></li>`;
+}
+
+export function activityListTemplate(activities) {
+    return activities.map((activity) => `<li>${activity.name}</li>`).join("");
 }
