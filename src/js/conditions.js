@@ -1,5 +1,5 @@
-// import "css/style.css";
-// import "css/conditions.css";
+import "css/style.css";
+import "css/conditions.css";
 import { getParkData, getParkAlerts, getParkVisitorCenters } from "./parkService.mjs";
 import { alertTemplate, visitorCenterTemplate, activityListTemplate } from "./templates.mjs";
 import setHeaderFooter from "./setHeaderFooter.mjs";
