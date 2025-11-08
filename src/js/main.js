@@ -1,6 +1,12 @@
-import "css/style.css";
-import "css/home.css";
+import "../css/style.css";
+import "../css/home.css";
 
+/*
+/ - Go to the root of the system. (C://)
+./ - Current directory
+../ - Parent directory
+no slash - Current directory
+*/
 
 import { getParkData, getInfoLinks } from "./parkService.mjs";
 import setHeaderFooter from "./setHeaderFooter.mjs";
