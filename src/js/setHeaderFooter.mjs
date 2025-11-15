@@ -15,7 +15,7 @@ function setHeaderInfo(data) {
 
 function setFooter(data) {
     const footerEl = document.querySelector("#park-footer");
-    footerEl.innerHTML = footerTemplate(data);
+    footerEl.insertAdjacentHTML("afterbegin", footerTemplate(data));
     /* output Mailing address and the voice phone number */
 }
 

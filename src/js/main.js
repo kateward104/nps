@@ -18,17 +18,44 @@ function setParkIntro(data) {
         <h1>${data.fullName}</h1>
         <p>${data.description}</p>
         `;
-    // intro.querySelector("h1").textContent = data.fullName;
-    // intro.querySelector("p").textContent = data.description;
 }
 
 
 function setParkInfoLinks(data) {
-    const infoSection = document.querySelector(".info");
-    const cards = data.map(mediaCardTemplate);
-    infoSection.innerHTML = cards.join("");
+    const infoEl = document.querySelector(".info");
+    const html = data.map(mediaCardTemplate);
+    infoEl.insertAdjacentHTML("afterbegin", html.join(""));
 }
 
+
+function enableNavigation() {
+    // use a querySelector to get the menu buttons
+    const menuButton = document.querySelector("#global-nav-toggle");
+    const subMenuToggles = document.querySelectorAll(".global-nav__split-button__toggle");
+    // when the main menu button is clicked:
+    menuButton.addEventListener("click", (ev) => {
+        let target = ev.target;
+
+        // toggle the show class on the global-nav
+        document.querySelector(".global-nav").classList.toggle("show");
+
+        // check to see if target is the button or something inside the button
+        if (target.tagName != "BUTTON") {
+            target = target.closest("button");
+        }
+
+        // check to see if we just opened or closed the menu
+        if (document.querySelector(".global-nav").classList.contains("show")) {
+            target.setAttribute("aria-expanded", true);
+        }
+        else {
+            target.setAttribute("aria-expanded", false);
+        }
+
+        console.log("toggle");
+
+    });
+}
 
 async function init() {
     const parkData = await getParkData();
@@ -36,7 +63,10 @@ async function init() {
     setHeaderFooter(parkData);
     setParkIntro(parkData);
     setParkInfoLinks(links);
+    enableNavigation();
 }
+
+
 
 init();
 
