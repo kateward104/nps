@@ -55,6 +55,21 @@ function enableNavigation() {
         console.log("toggle");
 
     });
+
+    subMenuToggles.forEach((toggle) => {
+        //for each submenu toggle
+        toggle.addEventListener("click", (ev) => {
+            // find the closest li ancestor, then find the submenu inside of that li and toggle the show class
+            ev.currentTarget
+                .closest("li")
+                .querySelector(".global-nav__submenu")
+                .classList.toggle("show");
+            // toggle the rotat class on the button icon that was clicked
+            ev.currentTarget.querySelector(".icon").classList.toggle("rotate");
+
+        });
+
+    });
 }
 
 async function init() {

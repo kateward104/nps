@@ -78,7 +78,7 @@
     border-top: 1px solid #333;
     max-height: 0;
     overflow: hidden;
-    transition: all 0.5s;
+    /*transition: all 0.5s;*/
 }
 
 .global-nav button {
@@ -90,6 +90,71 @@
 
 .global-nav svg {
     --icon-color: white;
+}
+
+.global-nav__section-heading {
+    margin: 0;
+    margin-bottom: 0;
+    padding: 1rem 0.625rem;
+    font-size: 1.25rem;
+}
+
+.section-heading--green {
+    /* NOT A THING, FIND AND CHANGE IN FINAL */
+    color: var(--bs-light-green);
+}
+
+.section-heading--blue {
+    /* NOT A THING, FIND AND CHANGE IN FINAL */
+    color: var(--bs-chathams-blue-3);
+}
+
+.global-nav__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px solid #444;
+}
+
+.global-nav__split-button {
+    display: flex;
+    background-color: var(--bs-gray-800);
+}
+
+.global-nav__split-button>a {
+    flex: 1;
+    align-self: center;
+    padding: 1rem 0.625rem;
+    display: block;
+}
+
+.global-nav__split-button>button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.global-nav__split-button>button:hover,
+.global-nav__split-button>a:hover {
+    background-color: var(--bs-gray-900);
+}
+
+/* Submenu styles */
+.global-nav__submenu {
+    list-style: none;
+    padding: 0;
+    font-size: 0.8em;
+    overflow: hidden;
+    max-height: 0;
+}
+
+.global-nav__submenu a {
+    display: block;
+    padding: 1rem 0.625rem;
+}
+
+.global-nav__submenu a hover {
+    text-decoration: underline;
 }
 
 
@@ -156,6 +221,8 @@
     flex-direction: column;
     font-size: 0.8rem;
 }
+
+
 
 
 
