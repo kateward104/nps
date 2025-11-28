@@ -13,20 +13,30 @@
     overflow: hidden;
 }
 
-svg {
-    .alert-information {
-        color: var(--alert-information);
-    }
+.disclaimer {
+    padding: 0 1em;
+}
 
-    .alert-danger {
-        color: var(--alert-danger);
-    }
+.alert-information {
+    color: var(--alert-information);
+}
 
-    .alert-closure {
-        color: var(--alert-closure);
-    }
+.alert-danger {
+    color: var(--alert-danger);
+}
 
-    .alert-caution {
-        color: var(--alert-caution);
-    }
+.alert-closure {
+    color: var(--alert-closure);
+}
+
+.alert-caution {
+    color: var(--alert-caution);
+}
+
+.hide {
+    display: none;
+}
+
+.rotate {
+    transform: rotate(180deg);
 }
