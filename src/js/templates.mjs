@@ -27,8 +27,10 @@ export function mediaCardTemplate(info) {
 
 export function visitorCenterTemplate(info) {
     return `<div class="visitorCenter">
-        <h3>${info.name}</h3>
-        <p>${info.description}</p>`;
+        <h4><a href="vistor-center.html?id=${info.id}">${info.name}</a></h4>
+        <p>${info.description}</p>;
+        <p>${info.directionsInfo}</p>
+        </li>`;
 }
 
 
