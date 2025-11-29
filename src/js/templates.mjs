@@ -4,7 +4,7 @@ import spritePath from '../images/sprite.symbol.svg';
 
 // parkInfoTemplate
 export function parkInfoTemplate(info) {
-    return `<a href="/" class="hero-banner__title:>${IntersectionObserver.name}</a>
+    return `<a href="/" class="hero-banner__title:>${info.fullName}</a>
     <p class="hero-banner__subtitle">
         <span>${info.designation}</span>
         <span>${info.states}</span>
@@ -26,11 +26,13 @@ export function mediaCardTemplate(info) {
 }
 
 export function visitorCenterTemplate(info) {
-    return `<div class="visitorCenter">
-        <h4><a href="vistor-center.html?id=${info.id}">${info.name}</a></h4>
-        <p>${info.description}</p>;
-        <p>${info.directionsInfo}</p>
-        </li>`;
+    return `
+        <li class="visitor-center">
+            <h4><a href="visitor-center.html?id=${info.id}">${info.name}</a></h4>
+            <p>${info.description}</p>
+            <p>${info.directionsInfo}</p>
+        </li>
+    `;
 }
 
 
@@ -84,3 +86,43 @@ export function alertTemplate(alert) {
 export function activityListTemplate(activities) {
     return activities.map((activity) => `<li>${activity.name}</li>`).join("");
 }
+
+
+/* visitor-center JavaScript for main */
+
+export function pageTitle(name) {
+    return `<h1 class="vc-name">${name}</h1>`;
+}
+
+
+/* List Template*/
+export function listTemplate(data, contentTemplate) {
+    const html = data.map(contentTemplate);
+    return `<ul>${html.join("")}</ul>`;
+}
+
+/*Image Template */
+export function vcImageTemplate(data) {
+    return `<li><img src="${data.url}" alt="${data.altText}"></li>`;
+}
+
+/*Amenity Template*/
+export function vcAmenityTemplate(data) {
+    return `<li>${data}</li>`;
+}
+
+
+
+
+/*
+Page title
+
+Visitor center general info (description, name, etc)
+
+Details box component
+
+Image gallery of images
+
+Simple list for amenities or other lists
+
+Contact info template*/

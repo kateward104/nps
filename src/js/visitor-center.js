@@ -16,4 +16,15 @@ async function init() {
     setHeaderFooter(parkData);
 }
 
+
+
+document.querySelector(".vc-header").insertAdjacentHTML("beforeend", pageTitleTemplate(data.name));
+
+const galleryHTML = listTemplate(data.images, vcImageTemplate);
+document.querySelector(".vc-gallery").insertAdjacentHTML("beforeend", galleryHTML);
+
+
+
 init();
+
+

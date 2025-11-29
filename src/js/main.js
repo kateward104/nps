@@ -11,6 +11,7 @@ no slash - Current directory
 import { getParkData, getInfoLinks } from "./parkService.mjs";
 import setHeaderFooter from "./setHeaderFooter.mjs";
 import { mediaCardTemplate } from "./templates.mjs";
+import { enableNavigation } from "./navigation.mjs";
 
 function setParkIntro(data) {
     const intro = document.querySelector(".intro");
@@ -34,7 +35,7 @@ async function init() {
     setHeaderFooter(parkData);
     setParkIntro(parkData);
     setParkInfoLinks(links);
-    enableNavigation();
+    /*enableNavigation();*/ /*I am not sure why this is breaking my css*/
 }
 
 
