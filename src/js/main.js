@@ -38,7 +38,6 @@ async function init() {
     setHeaderFooter(parkData);
     setParkIntro(parkData);
     setParkInfoLinks(links);
-    /*enableNavigation();*/ /*I am not sure why this is breaking my css*/
 }
 
 
